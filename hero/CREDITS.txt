@@ -1,0 +1,9 @@
+hero.webp, hero-cutout.webp, card-fortress.jpg
+  Source: "Кам’янець-Подільська фортеця надвечір.jpg" (Kamianets-Podilskyi Castle at the sunset, 2014-06-10)
+  Author: Sak Anastasiya (Wikimedia Commons, own work, Wiki Loves Monuments 2014 Ukraine)
+  License: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0
+  File page: https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D0%BC%E2%80%99%D1%8F%D0%BD%D0%B5%D1%86%D1%8C-%D0%9F%D0%BE%D0%B4%D1%96%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%B0_%D1%84%D0%BE%D1%80%D1%82%D0%B5%D1%86%D1%8F_%D0%BD%D0%B0%D0%B4%D0%B2%D0%B5%D1%87%D1%96%D1%80.jpg
+  Changes: converted Adobe RGB -> sRGB, cropped (full width, top 2748 of 3175 px), resized to 2560x1429; sky mask added for cutout; card = crop of towers.
+  Suggested on-page credit: Фото: Sak Anastasiya / Wikimedia Commons, CC BY-SA 4.0
+card-room.jpg
+  Source: img/bedroom-beams.jpg (client's own photo), crop x 340-1022 of 1280x853, resized to 400x500.

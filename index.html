@@ -276,8 +276,8 @@ svg.i--fill{fill:currentColor;stroke:none}
 @media (min-width:1024px){ .menu{display:none!important} }
 
 /* ---------- ФІЛЬМ: перший екран, настроєве відео прокручується скролом ----------
-   Базовий стан (без JS, «зменшити рух», економія трафіку): постер + шість глав звичайним списком.
-   .film-live (див. скрипт у head): сама секція стає «злітною смугою» 520vh / 420vh,
+   Базовий стан (без JS, «зменшити рух», економія трафіку): постер + чотири глави звичайним списком.
+   .film-live (див. скрипт у head): сама секція стає «злітною смугою» 260vh / 230vh,
    усередині липка сцена 100svh з canvas, затемненням, зерном, главами і смужкою прогресу. */
 .film{position:relative;z-index:0;background:var(--glow),var(--night);color:var(--on-dark)}
 .film__stage{position:relative;display:flex;flex-direction:column}
@@ -325,7 +325,7 @@ html:not(.film-live) .film__media{max-height:58svh}
 }
 
 /* ---- живий режим ---- */
-.film-live .film{margin-top:calc(-1 * var(--top-h, 0px));height:520vh;height:520svh}
+.film-live .film{margin-top:calc(-1 * var(--top-h, 0px));height:260vh;height:260svh}
 .film-live .film__stage{position:sticky;top:0;display:block;height:100vh;height:100svh;overflow:hidden}
 .film-live .film__media{position:absolute;inset:0;aspect-ratio:auto;max-height:none}
 .film-live .film__canvas{display:block}
@@ -367,7 +367,7 @@ html:not(.film-live) .film__media{max-height:58svh}
 
 /* телефон і вузькі портретні екрани: глави по центру внизу, над підписом */
 @media (max-width:760px),(max-aspect-ratio:4/5){
-  .film-live .film{height:420vh;height:420svh}
+  .film-live .film{height:230vh;height:230svh}
   .film-live .film__scrim{background:
     linear-gradient(to bottom, rgba(18,17,13,.66) 0, rgba(18,17,13,.3) 9%, rgba(18,17,13,0) 20%),
     linear-gradient(to top, rgba(18,17,13,.92) 0, rgba(18,17,13,.74) 26%, rgba(18,17,13,.5) 50%, rgba(18,17,13,.18) 62%, rgba(18,17,13,0) 74%)}
@@ -862,7 +862,7 @@ textarea.input{height:auto;min-height:96px;padding:13px 14px;resize:vertical;lin
 
 <main id="main">
 
-  <!-- 1. ФІЛЬМ: настроєве відео прокручується покадрово скролом, поверх нього шість глав -->
+  <!-- 1. ФІЛЬМ: настроєве відео прокручується покадрово скролом, поверх нього чотири глави -->
   <section class="film" id="top" aria-labelledby="hero-title">
     <div class="film__stage">
       <div class="film__media">
@@ -876,29 +876,21 @@ textarea.input{height:auto;min-height:96px;padding:13px 14px;resize:vertical;lin
       </div>
 
       <div class="wrap film__chapters">
-        <div class="chap chap--intro is-on" data-start="0" data-end="0.13">
+        <div class="chap chap--intro is-on" data-start="0" data-end="0.2">
           <p class="chap__kicker"><span class="nw">Міні-готель</span> · <span class="nw">Кам’янець-Подільський</span></p>
           <h1 class="chap__word" id="hero-title">Яндрусі<span class="sr">, міні-готель у Кам’янці-Подільському</span></h1>
           <!-- рядок під назвою прибрано: дублював главу «Чотири мансардні номери». Нове формулювання обирає Анна, без нових фактів (клас .chap__line) -->
           <a class="rating" href="#vidguky"><span class="stars" aria-hidden="true"><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg></span><span><b>4,8</b> · 157 відгуків у Google</span></a>
         </div>
-        <div class="chap" data-start="0.16" data-end="0.29">
+        <div class="chap" data-start="0.27" data-end="0.49">
           <h2>Чотири мансардні номери</h2>
-          <p>Дерев’яна стеля, своя ванна кімната з душем. Номери на двох і на чотирьох гостей.</p>
+          <p>Дерев’яна стеля, своя ванна з&nbsp;душем. На&nbsp;двох або на&nbsp;чотирьох гостей.</p>
         </div>
-        <div class="chap" data-start="0.32" data-end="0.46">
-          <h2>Мінікухня й кондиціонер</h2>
-          <p>У номерах на чотирьох. Паркування на території.</p>
-        </div>
-        <div class="chap" data-start="0.50" data-end="0.66">
+        <div class="chap" data-start="0.56" data-end="0.77">
           <h2>5–7 хвилин до Старого міста</h2>
           <p>Машиною. Або маршрутка №&nbsp;1.</p>
         </div>
-        <div class="chap" data-start="0.69" data-end="0.85">
-          <h2>4,8 у Google · 9,3 на Booking</h2>
-          <p>157 і 373 відгуки гостей.</p>
-        </div>
-        <div class="chap chap--cta" data-start="0.9" data-end="1">
+        <div class="chap chap--cta" data-start="0.85" data-end="1">
           <h2>Забронювати напряму</h2>
           <p>Від 850 грн за ніч. Відповідаємо в Telegram і Viber.</p>
           <div class="chap__cta">
@@ -1694,7 +1686,7 @@ textarea.input{height:auto;min-height:96px;padding:13px 14px;resize:vertical;lin
     s.files = list; s.n = list.length;
   });
   var mq = window.matchMedia('(max-width: 760px), (max-aspect-ratio: 4/5)');
-  var BATCH = 16, EASE = 0.2;
+  var BATCH = 16, EASE = 0.3;
 
   var set = null, frames = [], total = 1, loaded = 0, gen = 0;
   var progress = 0, target = 0, cur = 0, want = 0, drawn = -1;
